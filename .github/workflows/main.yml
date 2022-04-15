@@ -27,12 +27,12 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Generate changelog
-#        run: |
-#          npm install generate-changelog -g
-#          changelog generate
-        uses: charmixer/auto-changelog-action@v1
-        with:
-          token: ${{ secrets.YOUR_GITHUB_TOKEN }}
+        run: |
+          npm install generate-changelog -g
+          changelog generate
+#        uses: charmixer/auto-changelog-action@v1
+#        with:
+#          token: ${{ secrets.YOUR_GITHUB_TOKEN }}
 
       - name: Commit files
         env:
